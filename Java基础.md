@@ -154,3 +154,49 @@ class Hello {
 <span id="hashmap">HashMap</span>
 
 	HashMap储存数据的方式是—— 键值对,键不能重复，值可以重复 ,查找速度极快
+
+
+
+## 多线程
+在同一进程中同时运行多个任务
+
+![](https://fanfpy-img.oss-cn-beijing.aliyuncs.com/18-6-26/70229244.jpg)
+
+
+Java创建线程的三种方法
+- [实现Runnable接口](#runnable)
+- [实现Callable接口](#callable)
+- [通过继承Thread类](#thread)
+
+<span id="runnable"></span>
+#### 实现Runnable接口
+
+```
+public class MyRunnable implements Runnable{
+	public void run(){
+		......
+	}
+}
+```
+```
+public static void main(String[] args){
+	MyRunnable myRunnable = new MyRunnable();
+	Thread thread = new Thread(myRunnable);
+	thread.start();
+}
+```
+
+#### 继承Thread类
+```
+public class MyThread extends Thread{
+	public void run(){
+		......
+	}
+}
+```
+```
+public static void main(String[] args){
+	MyThrade mt = new MyThred();
+	mt.start();
+}
+```
