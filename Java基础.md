@@ -12,6 +12,8 @@ boolean | false|1位 | false，true
 
 ### 常量池
 
+测试
+
 ```
 Integer x = new Integer(123);
 Integer y = new Integer(123);
